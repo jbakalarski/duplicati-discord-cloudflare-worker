@@ -1,6 +1,6 @@
 # Duplicati + Discord Cloudflare Workers
 
-If you want to send notifications from your (self-hosted) [Duplicati](https://duplicati.com/) instance to Discord, then you can deploy this [Cloudflare worker](https://developers.cloudflare.com/workers/) to your Cloudflare account. When called, it modifies the incoming Duplicati notification data and sends an embedded message to a Discord webhook URL.
+If you want to send notifications from your (self-hosted) [Duplicati](https://duplicati.com/) instance to Discord, then you can deploy this [Cloudflare worker](https://developers.cloudflare.com/workers/) to your Cloudflare account or self-host it using [Docker](#self-hosting-using-docker). When called, it modifies the incoming Duplicati notification data and sends an embedded message to a Discord webhook URL.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/LekoArts/duplicati-discord-cloudflare-worker)
 
@@ -32,6 +32,15 @@ If you want to send notifications from your (self-hosted) [Duplicati](https://du
 ```text
 --send-http-level=Warning,Error,Fatal
 ```
+
+## Self-hosting using Docker
+**Requirements:**
+ - [Docker and Docker Compose installed](https://docs.docker.com/engine/install/)
+
+**Steps:**
+1. Clone this repository: `git clone https://github.com/LekoArts/duplicati-discord-cloudflare-worker.git`
+2. Change into the project directory: `cd duplicati-discord-cloudflare-worker`
+3. Start the service with Docker Compose: `docker compose up -d`
 
 ### Discord thread / forum channel
 

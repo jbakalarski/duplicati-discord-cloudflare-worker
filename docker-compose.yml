@@ -1,0 +1,7 @@
+services:
+  app:
+    container_name: duplicati-discord-worker
+    build: .
+    command: ["wrangler", "dev", "--ip", "0.0.0.0", "--port", "8787", "--local-protocol", "http"]
+    ports:
+      - "8787:8787" # <Host Port>:<Container Port (do not change)>
